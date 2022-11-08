@@ -9,7 +9,7 @@ import { useState, useEffect } from 'react';
 function App() {
 	const [isLoading, setIsLoading] = useState(true);
 	const [data, setData] = useState();
-	const [cartData, setCartData] = useState([{ items: [], totalPrice: 0, deliveryFees: 2.5 }]);
+	const [cartData, setCartData] = useState([{ items: [], totalPrice: 0 }]);
 
 	useEffect(() => {
 		const fetchData = async () => {

@@ -61,4 +61,3 @@ const CartElement = ({ element, cartData, setCartData, setReloadCart }) => {
 };
 
 export default CartElement;
-

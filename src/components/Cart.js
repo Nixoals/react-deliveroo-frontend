@@ -36,12 +36,12 @@ const Cart = ({ cartData, setCartData }) => {
 								</div>
 								<div className="before-total">
 									<h3>Frais de livraison</h3>
-									<h3>{cartData[0].deliveryFees} €</h3>
+									<h3>{2.5} €</h3>
 								</div>
 							</div>
 							<div className="total-amount">
 								<h2>Total</h2>
-								<h2>{(cartData[0].totalPrice + cartData[0].deliveryFees).toFixed(2)} €</h2>
+								<h2>{(cartData[0].totalPrice + 2.5).toFixed(2)} €</h2>
 							</div>
 						</div>
 					</div>
