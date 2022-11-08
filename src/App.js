@@ -13,7 +13,7 @@ function App() {
 
 	useEffect(() => {
 		const fetchData = async () => {
-			const response = await axios.get('http://localhost:4000/');
+			const response = await axios.get('https://site--nixoals-backend-deliveroo--gsmxcbzt8tzm.code.run/');
 			setData(response.data);
 			setIsLoading(false);
 		};
@@ -33,7 +33,11 @@ function App() {
 			<section className="content-menu">
 				<div>
 					{data.categories.map((category, index) => {
-						return <Categories key={index} categoryData={category} setCartData={setCartData} cartData={cartData}></Categories>;
+						if (category.meals.length > 0) {
+							return <Categories key={index} categoryData={category} setCartData={setCartData} cartData={cartData}></Categories>;
+						} else {
+							return null;
+						}
 					})}
 				</div>
 

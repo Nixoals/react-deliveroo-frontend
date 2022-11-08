@@ -30,9 +30,10 @@ const Meals = ({ meal, cartData, setCartData }) => {
 			<div onClick={addCart} className="meal-card">
 				<div className="meal-info">
 					<h3>{title}</h3>
-					<p>{description}</p>
+					{description && <p>{description}</p>}
+
 					<div>
-						<span>{price}</span>
+						<span>{price} €</span>
 						{popular && <span>Star populair</span>}
 					</div>
 				</div>
